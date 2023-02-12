@@ -1,4 +1,6 @@
 --Created by Filip Kohout
+--This is Flamethrower weapon server script from Zombie Defence
+--This script turns on/off the flamethrower, changes its global server values, changes its effects, plays its animations and its sounds 
 
 local WeaponsModule = require(game.ServerScriptService.Main.Attack.Damages) --Module that handles core things for every weapon
 local Settings = require(script.Parent.Settings) --This is where the settings are stored
