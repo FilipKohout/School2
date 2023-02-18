@@ -1,0 +1,25 @@
+{
+  "name": "takearide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-session-synchronize-socket.io": "^0.3.11",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.5",
+    "nodemon": "^2.0.16",
+    "pug": "^3.0.2",
+    "socket.io": "^4.5.1"
+  }
+}

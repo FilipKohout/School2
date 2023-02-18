@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <title>People</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./people.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <script src="./people.js"></script>
+    <div class="topnav">
+        <button id="homeButton" href="#home">Home</button>
+        <button id="messagesButton">Messages</button>
+        <button class="active" href="#people">People</button>
+        <form class="loggout_layout" action="/loggout" method="POST">
+            <button class="Loggout">Log Out</button>
+        </form>
+    </div>
+
+    <div class="list">
+        <button class="form__button" id="requests_button">Friend requests</button>
+    </div>
+
+    <script>
+        document.getElementById("messagesButton").addEventListener("click", function(){
+            window.location.href = '/messages';
+        });
+        document.getElementById("homeButton").addEventListener("click", function(){
+                window.location.href = '/home';
+            });
+    </script>
+</body>

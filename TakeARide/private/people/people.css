@@ -1,0 +1,108 @@
+body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+
+    margin: 0;
+    height: 100vh;
+    background: url(./background.jpg);
+    background-size: cover;
+    background-color: rgb(213, 213, 213);
+}
+
+.topnav {
+    background-color: rgba(51, 51, 51);
+    overflow: hidden;
+    border-bottom: 1px solid #333;
+}
+
+.topnav button {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(51, 51, 51, 1);
+}
+
+.topnav button:hover {
+    color: var(--color-primary);
+}
+
+.topnav button.active {
+    color: var(--color-primary);
+}
+
+.topnav button.Loggout {
+    float: left;
+    text-align: center;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+.topnav button.Loggout:hover {
+    background: var(--color-primary-dark);
+}
+
+.topnav button.Loggout:active {
+    transform: scale(0.98);
+}
+
+.loggout_layout {
+    float: right;
+    text-align: center;
+    padding: 6px 6px;
+}
+
+.back {
+    width: 400px;
+    max-width: 100%;
+    height: 200px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+    padding: 6px 6px;
+    align-content: center;
+    align-self: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.list {
+    width: 100%-6px;
+    padding: 6px 6px;
+    align-items: center;
+    display: grid;
+	place-items: center;
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form__button {
+    width: 400px;
+    padding: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}

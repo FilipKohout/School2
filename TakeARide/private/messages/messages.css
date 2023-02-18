@@ -1,0 +1,70 @@
+body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+
+    margin: 0;
+    height: 100vh;
+    background: url(./background.jpg);
+    background-size: cover;
+    background-color: rgb(213, 213, 213);
+}
+
+.topnav {
+    background-color: rgba(51, 51, 51);
+    overflow: hidden;
+    border-bottom: 1px solid #333;
+}
+
+.topnav button {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(51, 51, 51, 1);
+}
+
+.topnav button:hover {
+    color: var(--color-primary);
+}
+
+.topnav button.active {
+    color: var(--color-primary);
+}
+
+.topnav button.Loggout {
+    float: left;
+    text-align: center;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+.topnav button.Loggout:hover {
+    background: var(--color-primary-dark);
+}
+
+.topnav button.Loggout:active {
+    transform: scale(0.98);
+}
+
+.loggout_layout {
+    float: right;
+    text-align: center;
+    padding: 6px 6px;
+}

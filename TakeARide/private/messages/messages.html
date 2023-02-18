@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Messages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./messages.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<head>
+    <div class="topnav">
+        <button id="homeButton" href="#home">Home</button>
+        <button class="active" href="#messages">Messages</button>
+        <button id="peopleButton">People</button>
+        <form class="loggout_layout" action="/loggout" method="POST">
+            <button class="Loggout">Log Out</button>
+        </form>
+    </div>
+
+    <div class="contacts", id="contacts">
+        <div class="contact">
+            <label>Bob the tester</labe>
+        </div>
+    </div>
+
+    <div class="messages", id="messages">
+        <div class="message", id="1">
+            <label>Bob the tester: Hello</label>
+        </div>
+    </div>
+
+    <div class="inputMessage", id="messageInput">
+        <form id="messageInputForm" onsubmit="sendMessage()">
+            <input type="text" id="messageInputText">
+            <button type="submit" id="messageInputSubmit">
+        </form>
+    </div>
+
+    <script src="./messages.js"></script>
+
+    <script>
+        document.getElementById("homeButton").addEventListener("click", function(){
+            window.location.href = '/home';
+        });
+        document.getElementById("peopleButton").addEventListener("click", function(){
+            window.location.href = '/people';
+        });
+    </script>
+</head>

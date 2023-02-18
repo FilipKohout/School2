@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./profile.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <script src="./profile.js"></script>
+    <div class="topnav">
+        <button id="homeButton" href="#home">Home</button>
+        <button id="messagesButton">Messages</button>
+        <button class="active" id="peopleButton">People</button>
+        <form class="loggout_layout" action="/loggout" method="POST">
+            <button class="Loggout">Log Out</button>
+        </form>
+    </div>
+    <div class="text_box" id="bio_container" post_id="new">
+        <div class="form" id="create_post">
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <textarea type="text" class="form__input" id="create_content"
+                    placeholder="Tell people something about you."></textarea>
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <button class="form__button" onclick='updateBio()' post_id="new">Save</button>
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <button class="form__button" id="cancel_button" onclick='closeBioContainer()'>Cancel</button>
+                <div class="form__input-error-message"></div>
+            </div>
+        </div>
+    </div>
+    <div class="list" id="posts">
+        <div class="back" id="top_size">
+            <div class="top">
+                <h1 class="username" id="username">User</h1>
+                <button class="stat_button" id="follow_button" onclick="follow()" post_id="new">Follow</button>
+                <button class="stat_button" id="friend_button" post_id="new">Request
+                    Friendship</button>
+            </div>
+            <div class="stats">
+                <p class="followers" id="followers">0 Followers</p>
+                <p class="following" id="following">0 Following</p>
+                <p class="friends" id="friends">0 Friends</p>
+            </div>
+            <p class="bio" id="bio">
+                <button class='edit_b' id='edit_b' onclick=''></button>
+            </p>
+        </div>
+    </div>
+    <p class="load_error" id="loading_error">
+        Unable to load posts
+    </p>
+
+    <script>
+        document.getElementById("messagesButton").addEventListener("click", function () {
+            window.location.href = '/messages';
+        });
+        document.getElementById("homeButton").addEventListener("click", function () {
+            window.location.href = '/home';
+        });
+        document.getElementById("peopleButton").addEventListener("click", function () {
+            window.location.href = '/people';
+        });
+    </script>
+</body>
